@@ -1,0 +1,207 @@
+﻿@model ShopmeProject.ViewModels.CheckoutInfo
+@using ShopmeProject.Helpers
+@using ShopmeProject.Models
+@{
+    ViewBag.Title = "checkout";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Partial("Navigation")
+<div class="container-fluid">
+    <div class="text-center">
+        <h2>Checkout</h2>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header"><h5>Shipping information</h5></div>
+                <div class="card-body">
+                    <p>
+                        <b>Ship to:</b>&nbsp; @ViewBag.shippingAddress
+                        <a href="@Url.Action("showAddressBook","Address")">[Ship to another address]</a>
+                    </p>
+                    <p>
+                        <b>Days to deliver: </b>@Model.deliverDays day(s)
+                    </p>
+                    <p>
+                        <b>Expected deliver date: </b>@Model.getDeliverDate.ToString("ddd, dd MMM yyyy")
+                </div>
+            </div>
+
+            <div class="card mt-3 mb-3">
+                <div class="card-header"><h5>Payment Method</h5></div>
+                <div class="card-body">
+
+                    @if (Model.codSupported)
+                    {
+                        <div>
+                            <form action="@Url.Action("placeOrder","Checkout")" method="post">
+                                <p>
+                                    <input type="radio" name="paymentMethod" id="radioCOD" value="COD" /> Cash on Delivery (COD)
+                                    &nbsp;
+                                    <button class="btn btn-primary d-none" type="submit" id="buttonSubmit">Place Order with COD</button>
+
+                                </p>
+                            </form>
+                        </div>
+                    }
+
+
+
+                    <div id="paypal-button-container"></div>
+                    <form action="@Url.Action("processPayPalOrder", "Checkout")" method="post" id="paypalForm">
+                        <input type="hidden" name="orderId" id="orderId" />
+                        <input type="hidden" name="paymentMethod" value="PAYPAL" />
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header"><h5>Order Summary</h5></div>
+                <div class="card-body">
+                    <div>
+                        <table>
+
+                            @{
+                                foreach (CartItem item in ViewBag.cartItems)
+                                {
+                                    var product = item.Product;
+                                  
+
+                                    <tr>
+                                        <td>@item.Quantity X &nbsp;&nbsp;</td>
+                                        <td width="60%">
+                                            <a href=" @Url.Action("viewProductDetail", "ProductSite", new { alias = product.Alias })" target="_blank">
+                                                @product.ShortName
+                                            </a>
+                                            <br />
+                                            <small>
+                                                Ship:  @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, item.shippingCost, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                                            </small>
+                                        </td>
+                                        <td>
+                                            <div>@Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, item.getsubtotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)</div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            <tr><td colspan="3"><hr /></tr>
+                        </table>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">Product Total: </div>
+                        <div class="col">
+                            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, Model.productTotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                            
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">Shipping Total: </div>
+                        <div class="col">
+                            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, Model.shippingCostTotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                            
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col">Payment Total: </div>
+                        <div class="col"><b>
+                            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, Model.paymentTotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                           </b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@Html.Partial("modal_dialog")
+<script src="https://www.paypal.com/sdk/js?client-id=@(ViewBag.PAYPAL_API_CLIENT_ID)&currency=@(ViewBag.currencyCode)"></script>
+
+<script src="@Url.Content("~/Scripts/common_modal.js")"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#radioCOD").on("click", function () {
+            $("#buttonSubmit").removeClass("d-none");
+        });
+    });
+
+    function validateOrder(orderId) {
+        $("#orderId").val(orderId);
+        $("#paypalForm").submit();
+    }
+
+    paypal.Buttons({
+        enableStandardCardFields: true,
+        createOrder: function (data, actions) {
+            // setup a transaction
+            return actions.order.create({
+
+                intent: 'CAPTURE', // make payment immediately
+                payer: {
+                    name: {
+                        given_name: "@ViewBag.customer.FirstName",
+                        surname: "@ViewBag.customer.LastName"
+                    },
+
+                    address: {
+                        address_line_1: "@ViewBag.customer.addressLine1",
+                        address_line_2: "@ViewBag.customer.addressLine2",
+                        admin_area_1: "@ViewBag.customer.state",
+                        admin_area_2: "@ViewBag.customer.city",
+                        postal_code: "@ViewBag.customer.postalCode",
+                        country_code: "@ViewBag.customer.Country.Code"
+                    },
+
+                    email_address: "@ViewBag.customer.Email",
+
+                    phone: {
+                        phone_type: "MOBILE",
+                        phone_number: {
+                            national_number: "@ViewBag.customer.phoneNumber"
+                        }
+                    }
+                },
+
+                purchase_units: [{
+                    amount: {
+                        value: "@Model.GetPaymentTotal4PayPal()",
+                        currency_code: "@ViewBag.currencyCode"
+                    }
+                }],
+
+                application_context: {
+                    shipping_preference: "NO_SHIPPING"
+                }
+            });
+        },
+
+        onApprove: function (data, actions) {
+            // buyer approved payment
+            return actions.order.capture().then(function (details) {
+                // console.log(details);
+                orderId = details.id;
+                // totalAmount = details.purchase_units[0].amount.value;
+                console.log(orderId);
+                validateOrder(orderId);
+            });
+        },
+
+        onCancel: function (data) {
+            // buyer cancelled payment
+           
+            showWarningModal("Payment cancelled by the buyer");
+        },
+
+        onError: function (err) {
+            // error that prevents buyer from doing checkout
+            console.log(err);
+            showErrorModal("Something wrong with your address information, so payment will not work.");
+        }
+    }).render("#paypal-button-container");
+</script>

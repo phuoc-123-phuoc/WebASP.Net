@@ -1,0 +1,74 @@
+﻿@using System.Security.Claims
+@{
+    var user = User as ClaimsPrincipal;
+    string email = "";
+    var name = "";
+   
+    if (user != null)
+    {
+        email = user.FindFirst("email")?.Value;
+        name = user.FindFirst("unique_name")?.Value;
+
+      
+    }
+
+
+}
+<div class="row">
+
+    @if (email != null )
+    {
+    <form action="@Url.Action("Logout","LoginCustomer")" method="post" style="display:none;" name="logoutForm">
+        <input type="submit" value="Logout" />
+        
+    </form>
+    }
+
+    <div class="col-md">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="collapse navbar-collapse" id="searchNavbar">
+                <form class="form-inline" action="@Url.Action("searchFirstPage", "ProductSite")" method="get">
+                    <input type="search" name="searchString" class="form-control mr-sm-2" value="@ViewBag.searchString" placeholder="keyword" required />
+                    <input type="submit" value="Search" class="btn btn-outline-success" />
+                </form>
+                @if (email != null)
+                {
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+
+                            <b>
+                                <a class="nav-link" href="@Url.Action("editCustomer","AccountCustomer", new {email =email})">@name</a>
+
+                            </b>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("showAddressBook","Address")">Address Book</a>
+                        </li>
+
+                       
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","OrderSite")">Orders</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fas fa-shopping-cart fa-2x" href="@Url.Action("viewCart","ShoppingCart")"></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: document.logoutForm.submit()">Logout</a>
+                        </li>
+
+                    </ul>
+                }
+
+
+            </div>
+        </nav>
+    </div>
+</div>
+

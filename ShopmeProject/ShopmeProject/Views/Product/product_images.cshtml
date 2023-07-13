@@ -1,0 +1,82 @@
+﻿@{
+    var imagesList = new List<ShopmeProject.Models.ProductImage>(Model.product.Images);
+    int numberOfExistingExtraImages = Model.product.Images.Count;
+}
+
+<div class="row" id="divProductImages">
+    <div class="col border m-3 p-2">
+        <div><label>Main Image: </label></div>
+        <div class="m-2">
+            <img id="thumbnail" alt="Main image preview" class="img-fluid"
+                 src="@Model.product.getImagePath" />
+        </div>
+        <div>
+            <input type="file" id="fileImage" name="fileImage"
+                   required="@(Model.product.getImagePath == null)"
+                   accept="image/png, image/jpeg" />
+        </div>
+
+    </div>
+
+
+    @for (int i = 0; i < imagesList.Count; i++)
+    {
+        var productImage = imagesList[i];
+        <div class="col border m-3 p-2" id="divExtraImage@(i)">
+            <div>
+                <label>Extra Image #@(i + 1): @productImage.Name</label>
+                <a name="linkRemoveExtraImage" class="btn fas fa-times-circle fa-2x icon-dark float-right" title="Remove this image"></a>
+            </div>
+            <div class="m-2">
+                <img id="extraThumbnail@(i)" alt="Extra image #(i + 1) preview" class="img-fluid" src="@productImage.getImagePath" />
+            </div>
+            <div>
+                <input type="file" name="extraImage" accept="image/png, image/jpeg" />
+            </div>
+            <input type="hidden" name="imageIDs" id="imageId@(i)" value="@productImage.Id" />
+            <input type="hidden" name="imageNames" id="imageName@(i)" value="@productImage.Name" />
+        </div>
+    }
+
+
+    <div class="col border m-3 p-2" id="divExtraImage@(numberOfExistingExtraImages)">
+        <div id="extraImageHeader@(numberOfExistingExtraImages)">
+            <label>Extra Image #@(numberOfExistingExtraImages + 1):</label>
+        </div>
+        <div class="m-2">
+            <img id="extraThumbnail@(numberOfExistingExtraImages)"
+                 alt="Extra image@(numberOfExistingExtraImages) preview" class="img-fluid"
+                 src="@Url.Content("~/images/image-thumbnail.png")" />
+        </div>
+        <div>
+            <input type="file" name="extraImage"
+                   accept="image/png, image/jpeg" />
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

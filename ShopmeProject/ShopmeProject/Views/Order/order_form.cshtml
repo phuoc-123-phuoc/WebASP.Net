@@ -1,0 +1,42 @@
+﻿@model ShopmeProject.Models.Order
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div>
+        <h2>@ViewBag.Title | @ViewBag.pageTitle</h2>
+    </div>
+
+    <form action="@Url.Action("saveOrder","Order")" method="post">
+        <input type="hidden" name="orderId" value="@Model.Id" />
+        <div>
+            <div  id="track" >
+
+                @Html.Partial("order_form_tracks", Model)
+            </div>
+        </div>
+       
+        <div>
+            <p class="text-center">
+                <input type="submit" value="Save" class="btn btn-primary m-3" />
+                <input type="button" value="Cancal" class="btn btn-secondary" id="buttonCancel" />
+            </p>
+        </div>
+    </form>
+</div>
+@Html.Partial("modal_dialog")
+<script type="text/javascript">
+     var contextPath = '@Url.Action("","Setting")';
+	$(document).ready(function() {
+        $('#buttonCancel').click(function () {
+            window.location = "@Url.Action("Index")";
+		});
+
+	});
+</script>
+
+<script src="@Url.Content("~/Scripts/order_form_tracks.js")"></script>
+

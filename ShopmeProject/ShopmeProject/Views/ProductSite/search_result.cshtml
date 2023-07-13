@@ -1,0 +1,111 @@
+﻿@using ShopmeProject.Helpers
+@using ShopmeProject.Models
+@{
+    ViewBag.Title = "search_result";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Partial("Navigation")
+
+
+@if (ViewBag.TotalItems > 0)
+{
+    <div>
+        <h2>Search Results for '@ViewBag.searchString'</h2>
+    </div>
+}
+else
+{
+    <div>
+        <h3>No match found for '@ViewBag.searchString'</h3>
+    </div>
+}
+
+<div class="row">&nbsp;</div>
+
+<div class="row">
+    @foreach (Product product in ViewBag.pageProducts)
+    {
+        <div class="col-sm-2">
+            <div>
+                <a href="@Url.Action("viewProductDetail", "ProductSite", new { alias = product.Alias })">
+                    <img src="@product.getImagePath" width="150" />
+                    <br />
+                    <b>@product.Name</b>
+                </a>
+            </div>
+            @if (@product.DiscountPercent <= 0)
+            {
+                <div>
+                    @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+
+                </div>
+            }
+
+            @if (@product.DiscountPercent > 0)
+            {
+                <div>
+                    @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.getDiscountPrice, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+
+                    <del>
+                        @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                    </del>
+                </div>
+            }
+
+
+        </div>
+    }
+</div>
+
+
+@if (ViewBag.TotalItems > 0)
+{
+    <div class="text-center m-1">
+
+        <span>Showing products # @ViewBag.StartCount to @ViewBag.EndCount of @ViewBag.TotalItems</span>
+
+    </div>
+}
+else
+{
+    <div class="text-center m-1">
+        <span>No products found</span>
+    </div>
+}
+
+@if (ViewBag.TotalPage > 1)
+{
+
+    <nav>
+        <ul class="pagination justify-content-center flex-wrap">
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLinkSearch", new { pageNumber = 1, label = "First" })
+
+
+            </li>
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLinkSearch", new { pageNumber = ViewBag.CurrentPage - 1, label = "Previous" })
+            </li>
+            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+            {
+                <li class="@(ViewBag.CurrentPage != i ? "page-item" : "page-item active")">
+                    @Html.Partial("_PageLinkSearch", new { pageNumber = i, label = i.ToString() })
+
+                </li>
+
+            }
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLinkSearch", new { pageNumber = ViewBag.CurrentPage + 1, label = "Next" })
+
+            </li>
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLinkSearch", new { pageNumber = ViewBag.TotalPage, label = "Last" })
+            </li>
+        </ul>
+    </nav>
+
+
+}
+

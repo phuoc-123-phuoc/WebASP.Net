@@ -1,0 +1,133 @@
+﻿
+<form action="@Url.Action("saveGeneralSettings", "Setting")" method="post" enctype="multipart/form-data">
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Site Name:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" name="SITE_NAME"
+                   value="@ViewBag.SITE_NAME" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Copyright:</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" name="COPYRIGHT"
+                   value="@ViewBag.COPYRIGHT" required />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Site Logo:</label>
+        <div class="col-sm-8">
+            <img id="thumbnail" alt="Site Logo thumbnail" src="/site-logo/@ViewBag.SITE_LOGO"
+                 width="150" height="70" />
+            <input type="file" id="fileImage" name="fileImage" accept="image/png, image/jpeg" />
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Currency Type</label>
+        <div class="col-sm-8">
+            <select name="CURRENCY_ID" class="form-control">
+                @foreach (var currency in ViewBag.Currencies)
+                {
+                    if (ViewBag.CURRENCY_SYMBOL == currency.Symbol)
+                    {
+                        <option value="@currency.Name" selected> @currency.Name - @currency.Code - @currency.Symbol </option>
+                    }
+                    else
+                    {
+                        <option value="@currency.Name"> @currency.Name - @currency.Code - @currency.Symbol </option>
+                    }
+
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Currency Symbol Position:</label>
+        <div class="col-sm-8">
+            <select name="CURRENCY_SYMBOL_POSITION" class="form-control">
+                @if (ViewBag.CURRENCY_SYMBOL_POSITION == "Before price")
+                {
+                    <option value="Before price" selected>Before price</option>
+                    <option value="After price">After price</option>
+                }
+                else
+                {
+                    <option value="Before price">Before price</option>
+                    <option value="After price" selected>After price</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Decimal Point Type:</label>
+        <div class="col-sm-8">
+            <select name="DECIMAL_POINT_TYPE" class="form-control">
+                @if (ViewBag.DECIMAL_POINT_TYPE == "POINT")
+                {
+                    <option value="POINT" selected>POINT (.)</option>
+                    <option value="COMMA">COMMA (,)</option>
+                }
+                else
+                {
+                    <option value="POINT">POINT (.)</option>
+                    <option value="COMMA" selected>COMMA (,)</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Decimal Digits:</label>
+        <div class="col-sm-8">
+            <select name="DECIMAL_DIGITS" class="form-control">
+                @for (int i = 1; i <= 4; i++)
+                {
+
+                    if (ViewBag.DECIMAL_DIGITS == @i.ToString())
+                    {
+                        <option value="@i" selected>@i</option>
+                    }
+                    else
+                    {
+                        <option value="@i">@i</option>
+                    }
+                }
+
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Thousands Point Type:</label>
+        <div class="col-sm-8">
+            <select name="THOUSANDS_POINT_TYPE" class="form-control">
+                @if (ViewBag.THOUSANDS_POINT_TYPE == "POINT")
+                {
+                    <option value="POINT" selected>POINT (.)</option>
+                    <option value="COMMA">COMMA (,)</option>
+                }
+                else
+                {
+                    <option value="POINT">POINT (.)</option>
+                    <option value="COMMA" selected>COMMA (,)</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <input type="submit" value="Save" class="btn btn-primary m-3" />
+    </div>
+
+</form>

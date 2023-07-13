@@ -1,0 +1,193 @@
+﻿@model List<ShopmeProject.Models.CartItem>
+@using ShopmeProject.ViewModels
+@using ShopmeProject.Helpers
+@{
+    ViewBag.Title = "shopping_cart";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Partial("Navigation")
+<div class="container-fluid">
+    <div class="text-center">
+        <h2>Your Shopping Cart</h2>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-8">
+            @{
+                var count = 1;
+            }
+            @foreach (var item in Model)
+            {
+                var product = item.Product;
+                var status = new { Count = count };
+                count++;
+                <div class="row border rounded p-1" id="row@(status.Count)">
+                    <div class="col-1">
+                        <div class="divCount">@status.Count</div>
+                        <div>
+                            <a class="fas fa-trash icon-dark linkRemove" rowNumber="@status.Count" href="@Url.Action("removeProduct", "ShoppingCartRest")?productId=@product.Id"></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <img src="@product.getImagePath" class="img-fluid" />
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <a href="@Url.Action("viewProductDetail", "ProductSite", new { alias = product.Alias })" target="_blank" title="@product.Name">
+                                <b>@product.Name</b>
+                            </a>
+                        </div>
+                        <div>
+                            @Html.Partial("quantity_control", new QuantityControl(product.Id, item.Quantity.ToString()))
+                        </div>
+                        <div>
+                            <span>X&nbsp;</span>
+
+
+                            @if (@product.DiscountPercent <= 0)
+                            {
+                                @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+
+                            }
+                            @if (@product.DiscountPercent > 0)
+                            {
+                                <span style="font-size: large; color: darkred">
+                                    @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.getDiscountPrice, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                                </span>
+                                <del>
+                                    @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+                                </del>
+                            }
+
+                        </div>
+                        <div>
+                            <span>=&nbsp;</span>
+                            <span class="h4 subtotal" id="subtotal@(product.Id)">
+                                @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @item.getsubtotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-1" id="blankLine@(status.Count)">&nbsp;</div>
+            }
+
+        </div>
+
+        <div class="col-sm-4" id="sectionTotal">
+            @if (Model != null && Model.Count > 0)
+            {
+                <div>
+                    <span class="h3">Estimated Total:</span>
+                </div>
+                <div class="mt-2">
+                    <span id="total" class="h2">
+                        @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, (double)ViewBag.estimatedTotal, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+                    </span>
+
+                </div>
+                <div class="mt-2">
+                    @if (ViewBag.shippingSupported)
+                    {
+                        <form action="@Url.Action("showCheckoutPage", "Checkout")" method="post">
+                            <button type="submit" class="btn btn-danger p-3 mt-2">Check Out</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <div>
+                            <span class="h5 text-warning">No shipping available for your location</span>
+                        </div>
+
+                        if (ViewBag.usePrimaryAddressAsDefault)
+                        {
+                            <a href="@Url.Action("editCustomer", "AccountCustomer", new { email = ViewBag.customer.Email, redirect = "cart" })" class="h6">Update your address</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("showAddressBook", "Address", new { redirect = "cart" })" class="h6">Use another shipping address</a>
+                        }
+                    }
+
+
+                   
+                </div>
+                @*<div class="mt-2">
+                        @if (shippingSupported)
+                        {
+                            <form action="/checkout" method="post">
+                                <button type="submit" class="btn btn-danger p-3 mt-2">Check Out</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <div>
+                                <span class="h5 text-warning">No shipping available for your location</span>
+                            </div>
+
+                            @if (usePrimaryAddressAsDefault)
+                            {
+                                <a href="/account_details?redirect=cart" class="h6">Update your address</a>
+                            }
+                            else
+                            {
+                                <a href="/address_book?redirect=cart" class="h6">Use another shipping address</a>
+                            }
+                        }
+                    </div>*@
+            }
+        </div>
+
+
+        @*<div class="col-sm-4" th:unless="${#lists.isEmpty(cartItems)}" id="sectionTotal">
+                <div>
+                    <span class="h3">Estimated Total:</span>
+                </div>
+                <div class="mt-2">
+                    <span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span><span id="total" class="h2">[[${#numbers.formatDecimal(estimatedTotal, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE)}]]</span><span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>
+                </div>
+                <div class="mt-2">
+                    <div th:if="${shippingSupported}">
+                        <form th:action="@{/checkout}">
+                            <button type="submit" class="btn btn-danger p-3 mt-2">Check Out</button>
+                        </form>
+                    </div>
+
+                    <div th:unless="${shippingSupported}">
+                        <div><span class="h5 text-warning">No shipping available for your location</span></div>
+
+                        <div th:if="${usePrimaryAddressAsDefault}">
+                            <a th:href="@{/account_details(redirect=cart)}" class="h6">Update your address</a>
+                        </div>
+
+                        <div th:unless="${usePrimaryAddressAsDefault}">
+                            <a th:href="@{/address_book(redirect=cart)}" class="h6">Use another shipping address</a>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+
+    <div id="sectionEmptyCartMessage" class="text-center @if (Model.Count > 0) { <text>d-none</text> }">
+        <h3>You have not chosen any products yet.</h3>
+    </div>
+
+</div>
+@Html.Partial("modal_dialog")
+
+<script type="text/javascript">
+    contextPath = "@Url.Action("updateQuantity", "ShoppingCartRest")";
+    currencySymbol = "@ViewBag.CURRENCY_SYMBOL";
+    currencySymbolPosition = "@ViewBag.CURRENCY_SYMBOL_POSITION"
+    decimalDigits = "@ViewBag.DECIMAL_DIGITS";
+    decimalPointType = "@ViewBag.DECIMAL_POINT_TYPE";
+    thousandsPointType = "@ViewBag.THOUSANDS_POINT_TYPE";
+
+</script>
+
+<script src="@Url.Content("~/Scripts/common_modal.js")"></script>
+<script src="@Url.Content("~/Scripts/formatPrice.js")"></script>
+<script src="@Url.Content("~/Scripts/shopping_cart.js")"></script>

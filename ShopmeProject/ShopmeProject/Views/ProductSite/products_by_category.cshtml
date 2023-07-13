@@ -1,0 +1,145 @@
+﻿
+@model IEnumerable<ShopmeProject.Models.Category>
+@using ShopmeProject.Models
+@using ShopmeProject.Helpers
+
+@{
+    ViewBag.Title = "products_by_category";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+    var listCategoryParents = Model;
+}
+
+@Html.Partial("Navigation")
+
+@if (listCategoryParents != null)
+{
+    <div class="row">
+        <div class="col">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="@Url.Action("Index", "HomeSite")">Home</a>
+                    </li>
+
+                    @foreach (var parent in listCategoryParents)
+                    {
+                        <li class="breadcrumb-item">
+                            <a href="@Url.Action("viewCategoryFirstPage", "ProductSite", new { alias = parent.Alias })">@parent.Name</a>
+                        </li>
+                    }
+
+                    @*@if (product != null)
+                        {
+                            <li class="breadcrumb-item">
+                                <span>@product.shortName</span>
+                            </li>
+                        }*@
+                </ol>
+            </nav>
+        </div>
+    </div>
+}
+
+<div class="row text-center">
+    @foreach (var cat in ViewBag.category.Children)
+    {
+        <div class="col">
+            <a href="@Url.Action("viewCategoryFirstPage", "ProductSite", new { alias = cat.Alias })">
+                <img src="@cat.getImagePath" width="150" />
+                <br />
+                <b>@cat.Name</b>
+            </a>
+        </div>
+    }
+
+</div>
+
+<div class="row">&nbsp;</div>
+
+<div class="row">
+    @foreach (Product product in ViewBag.pageProducts)
+    {
+        <div class="col">
+            <div>
+                <a href="@Url.Action("viewProductDetail", "ProductSite", new { alias = product.Alias })">
+                    <img src="@product.getImagePath" width="150" />
+                    <br />
+                    <b>@product.Name</b>
+                </a>
+            </div>
+            @if (@product.DiscountPercent <= 0)
+            {
+        <div>
+            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+          
+        </div>
+            }
+
+            @if (@product.DiscountPercent > 0)
+            {
+        <div>
+            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.getDiscountPrice, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+            
+           
+            <del>
+                @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, @product.Price, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+            </del>
+        </div>
+            }
+
+
+        </div>
+    }
+</div>
+
+@if (ViewBag.TotalItems > 0)
+{
+    <div class="text-center m-1">
+
+        <span>Showing users # @ViewBag.StartCount to @ViewBag.EndCount of @ViewBag.TotalItems</span>
+
+    </div>
+}
+else
+{
+    <div class="text-center m-1">
+        <span>No users found</span>
+    </div>
+}
+
+@if (ViewBag.TotalPage > 1)
+{
+
+    <nav>
+        <ul class="pagination justify-content-center flex-wrap">
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = 1, label = "First" })
+
+
+            </li>
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage - 1, label = "Previous" })
+            </li>
+            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+            {
+                <li class="@(ViewBag.CurrentPage != i ? "page-item" : "page-item active")">
+                    @Html.Partial("_PageLink", new { pageNumber = i, label = i.ToString() })
+
+                </li>
+
+            }
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage + 1, label = "Next" })
+
+            </li>
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.TotalPage, label = "Last" })
+            </li>
+        </ul>
+    </nav>
+
+
+}
+
+

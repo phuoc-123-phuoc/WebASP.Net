@@ -1,0 +1,164 @@
+﻿@model IEnumerable<ShopmeProject.Models.Brand>
+@{
+    ViewBag.Title = "BrandsIndex";
+}
+<div>
+    <h2>Manage Brand</h2>
+    <a href="@Url.Action("NewBrands","Brands")" class="fas fa-folder-plus fa-2x icon-dark mr-2"></a>
+</div>
+<div>
+    @using (Html.BeginForm("ListByPage", "Brands", FormMethod.Get, new { @class = "form-inline m-3" }))
+    {
+        <input type="hidden" name="pageNum" value="1" />
+        <label>&nbsp;&nbsp;</label>
+        <input type="search" name="keyword" value="@ViewBag.KeyWord" class="form-control" required />
+        <label>&nbsp;&nbsp;</label>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        <label>&nbsp;&nbsp;</label>
+        <button type="button" class="btn btn-secondary" onclick="clearFilter()"><i class="fas fa-eraser"></i></button>
+    }
+
+</div>
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="alert alert-success text-center">@ViewBag.Message</div>
+}
+<div>
+    <table class="table table-bordered table-striped table-hover table-responsive-xl">
+        <thead class="thead-dark">
+            <tr>
+                <th>Brand ID</th>
+                <th>Logo</th>
+                <th>Brand Name</th>
+                <th>Categories</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var brands in Model)
+            {
+                <tr>
+                    <td>@brands.Id</td>
+                    <td>
+                        @if (string.IsNullOrEmpty(brands.Logo))
+                        {
+                            <span class="fa-solid fa-image-portrait fa-3x icon-silver"></span>
+                        }
+                        else
+                        {
+                            <img src="@brands.getLogoPath" style="width: 100px;" />
+                        }
+                    </td>
+                    <td>@brands.Name</td>
+                    <td>
+                        @foreach (var category in brands.Categories)
+                        {
+                            <span class="badge badge-secondary" >@category.Name</span>
+                        }
+
+                    </td>
+
+                   
+                    <td>
+                        <a class="fa-solid fa-pen-to-square fa-2x icon-green" href="@Url.Action("Edit", "Brands", new { id = brands.Id})" title="Edit this user"></a>
+                        &nbsp;
+                        <a class="fa-solid fa-trash fa-2x icon-dark link-delete" href="@Url.Action("Delete", "Brands", new { id = brands.Id })" brandId="@brands.Id" title="Delete this user"></a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@if (ViewBag.TotalItems > 0)
+{
+    <div class="text-center m-1">
+
+        <span>Showing users # @ViewBag.StartCount to @ViewBag.EndCount of @ViewBag.TotalItems</span>
+
+    </div>
+}
+else
+{
+    <div class="text-center m-1">
+        <span>No users found</span>
+    </div>
+}
+
+@if (ViewBag.TotalPage > 1)
+{
+
+    <nav>
+        <ul class="pagination justify-content-center flex-wrap">
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = 1, label = "First" })
+
+
+            </li>
+            <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage - 1, label = "Previous" })
+            </li>
+            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+            {
+                <li class="@(ViewBag.CurrentPage != i ? "page-item" : "page-item active")">
+                    @Html.Partial("_PageLink", new { pageNumber = i, label = i.ToString() })
+
+                </li>
+
+            }
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage + 1, label = "Next" })
+
+            </li>
+            <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                @Html.Partial("_PageLink", new { pageNumber = ViewBag.TotalPage, label = "Last" })
+            </li>
+        </ul>
+    </nav>
+
+
+}
+
+
+<div class="modal fade text-center" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Confirmation</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <span id="confirmText"></span>
+            </div>
+
+            <div class="modal-footer">
+                <a class="btn btn-success" href="" id="yesButton">Yes</a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".link-delete").on("click", function (e) {
+            e.preventDefault();
+            link = $(this);
+            //alert($(this).attr("href"));
+            brandId = link.attr("brandId");
+            $("#yesButton").attr("href", link.attr("href"));
+            $("#confirmText").text("Are you sure you want to delete this brand ID " + brandId + " ?");
+            $("#confirmModal").modal();
+        });
+
+    });
+
+    function clearFilter(){
+		window.location = '@Url.Action("Index")';
+	}
+
+
+</script>
+

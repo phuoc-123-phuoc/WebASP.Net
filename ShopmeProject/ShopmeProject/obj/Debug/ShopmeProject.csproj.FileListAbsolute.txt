@@ -1,0 +1,695 @@
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll.config
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.pdb
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe.config
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.rsp
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe.config
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.rsp
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.AppContext.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Console.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Http.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe.config
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.rsp
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Razor.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\WebGrease.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.Razor.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.pdb
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.AssemblyReference.cache
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CoreCompileInputs.cache
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CopyComplete
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.pdb
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.GenerateResource.cache
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser1.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck1.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.upDateLengPassword.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdataUser.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Buffers.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Memory.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Text.Json.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.ValueTuple.dll
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Buffers.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Memory.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Text.Json.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\bin\System.ValueTuple.xml
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCategory.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableBrands.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.NotThingD.resources
+C:\Users\trant\Documents\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProduct.resources
+D:\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll.config
+D:\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\ShopmeProject.pdb
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe.config
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csc.rsp
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe.config
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\csi.rsp
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.AppContext.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Console.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Globalization.Calendars.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Http.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Sockets.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.ValueTuple.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe.config
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\vbc.rsp
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe
+D:\Project\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Buffers.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Memory.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Text.Json.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.ValueTuple.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Razor.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\WebGrease.dll
+D:\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Buffers.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Memory.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Text.Json.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.ValueTuple.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.Razor.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.xml
+D:\Project\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.pdb
+D:\Project\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.AssemblyReference.cache
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser1.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck1.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.upDateLengPassword.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdataUser.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCategory.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableBrands.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.NotThingD.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProduct.resources
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.GenerateResource.cache
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CoreCompileInputs.cache
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CopyComplete
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.dll
+D:\Project\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.pdb
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll.config
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\ShopmeProject.pdb
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe.config
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csc.rsp
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe.config
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\csi.rsp
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.AppContext.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Console.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Http.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe.config
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\vbc.rsp
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\EntityFramework.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Buffers.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Memory.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Text.Json.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.ValueTuple.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Razor.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\WebGrease.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\EntityFramework.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Buffers.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Memory.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Text.Json.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.ValueTuple.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.Razor.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.pdb
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser1.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck1.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.upDateLengPassword.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdataUser.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCategory.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableBrands.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.NotThingD.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProduct.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.GenerateResource.cache
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CoreCompileInputs.cache
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CopyComplete
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.pdb
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateAllowNullForMainImage.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime1.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableProductImage.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProductDetail.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails1.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateCategoryTable.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductColumnFDT.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting1.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCurrency.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCountryState.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCustomer.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddColForCus.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColumResetPassword.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddTableCartItem.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableShippingRate.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableAddress.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrder.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Addcolumn4TableOrder.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrderTrack.resources
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\PayPalCheckoutSdk.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\bin\PayPalHttp-Dotnet.dll
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.AssemblyReference.cache
+C:\Users\trant\Documents\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Somthing.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll.config
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\ShopmeProject.pdb
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe.config
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csc.rsp
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe.config
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\csi.rsp
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.AppContext.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Collections.Immutable.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Console.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Globalization.Calendars.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Http.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Sockets.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Reflection.Metadata.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.ValueTuple.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe.config
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\vbc.rsp
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe.config
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\EntityFramework.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.Web.Infrastructure.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\PayPalCheckoutSdk.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\PayPalHttp-Dotnet.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Buffers.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Memory.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Text.Json.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.ValueTuple.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Razor.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\WebGrease.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\EntityFramework.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Buffers.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Memory.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Text.Json.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.ValueTuple.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.Razor.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.pdb
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.AssemblyReference.cache
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser1.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck1.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.upDateLengPassword.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdataUser.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCategory.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableBrands.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.NotThingD.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProduct.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateAllowNullForMainImage.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime1.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableProductImage.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProductDetail.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails1.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateCategoryTable.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductColumnFDT.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting1.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCurrency.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCountryState.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCustomer.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddColForCus.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColumResetPassword.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddTableCartItem.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableShippingRate.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableAddress.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrder.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Addcolumn4TableOrder.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrderTrack.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Somthing.resources
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.GenerateResource.cache
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CoreCompileInputs.cache
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CopyComplete
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.dll
+E:\Thiết Kế Web\BTL\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.pdb
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll.config
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\ShopmeProject.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\ShopmeProject.pdb
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csc.exe.config
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csc.rsp
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csi.exe.config
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\csi.rsp
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.AppContext.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Console.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Http.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\vbc.exe.config
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\vbc.rsp
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\EntityFramework.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\PayPalCheckoutSdk.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\PayPalHttp-Dotnet.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Buffers.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Memory.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Text.Json.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.ValueTuple.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Razor.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\WebGrease.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\EntityFramework.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\EntityFramework.SqlServer.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Buffers.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Memory.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Numerics.Vectors.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Text.Encodings.Web.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Text.Json.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.ValueTuple.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Helpers.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Mvc.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Optimization.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.Razor.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Newtonsoft.Json.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Antlr3.Runtime.pdb
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.AssemblyReference.cache
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableUser1.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColunmIscheck1.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.upDateLengPassword.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdataUser.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCategory.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableBrands.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.NotThingD.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProduct.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateAllowNullForMainImage.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.updateFieldCreateTime1.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.createTableProductImage.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableProductDetail.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductDetails1.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateCategoryTable.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.UpdateTableProductColumnFDT.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableSetting1.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCurrency.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCountryState.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableCustomer.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddColForCus.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.addColumResetPassword.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.AddTableCartItem.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableShippingRate.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableAddress.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrder.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Addcolumn4TableOrder.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.CreateTableOrderTrack.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.Migrations.Somthing.resources
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.GenerateResource.cache
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CoreCompileInputs.cache
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.csproj.CopyComplete
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.dll
+C:\Users\trant\Downloads\ShopmeProject\ShopmeProject\obj\Debug\ShopmeProject.pdb

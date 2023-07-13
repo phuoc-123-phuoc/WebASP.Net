@@ -1,0 +1,23 @@
+﻿
+
+@model dynamic
+
+@{
+    var pageNum = (int)Model.pageNumber;
+    var label = (string)Model.label;
+    //var sortField = (string)Model.sortField;
+    //var sortDir = (string)Model.sortDir;
+    //var keyword = (string)Model.keyword;
+}
+
+<a class="page-link" href="@Url.Action("ListByPage", "OrderSite", new {
+                          pageNum = pageNum,
+
+                          //sortField = sortField,
+                          //sortDir = sortDir,
+                          Orderkeyword = @ViewBag.Orderkeyword
+                      })">
+    @label
+</a>
+
+

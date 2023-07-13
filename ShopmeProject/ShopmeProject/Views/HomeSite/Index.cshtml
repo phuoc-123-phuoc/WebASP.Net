@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ShopmeProject.Models.Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Partial("Navigation")
+<h1>@ViewBag.SITE_NAME</h1>
+
+
+<h1>Category Section</h1>
+<div class="row">
+    @foreach (var catSection in Model)
+    {
+
+        <div class="col-sm-1">
+            <div><img src="@Url.Content(catSection.getImagePath)" width="80" /></div>
+            <div>
+                <a href="@Url.Action("viewCategoryFirstPage", "ProductSite", new { alias = catSection.Alias })">@catSection.Name</a>
+            </div>
+        </div>
+    }
+
+</div>
+
+

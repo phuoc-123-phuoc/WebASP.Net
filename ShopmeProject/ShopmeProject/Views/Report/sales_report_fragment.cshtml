@@ -1,0 +1,70 @@
+﻿@model string
+
+@{
+    string buttonClass = "button-sales-by" + Model;
+}
+
+<div>
+    <button period="last_7_days" class="btn btn-primary m-1 @(buttonClass)">Last 7 Days</button>
+    <button period="last_28_days" class="btn btn-light m-1 @(buttonClass)">Last 28 Days</button>
+    <button period="last_6_months" class="btn btn-light m-1 @(buttonClass)">Last 6 Months</button>
+    <button period="last_year" class="btn btn-light m-1 @(buttonClass)">Last Year</button>
+    <button class="btn btn-light m-1 @(buttonClass)">Custom Date Range</button>
+</div>
+
+<form>
+    <div id="divCustomDateRange@(Model)" class="d-none">
+        From date: <input type="date" id="startDate@(Model)"> &nbsp;
+        To date: <input type="date" id="endDate@(Model)"> &nbsp;
+        <button type="button" class="btn btn-secondary" id="buttonViewReportByDateRange@(Model)">View</button>
+    </div>
+</form>
+
+<div id="chart_sales_by@(Model)" class="justify-content-center mt-3"></div>
+
+<div class="row justify-content-center">
+    <div class="col-2-sm">
+        <div class="card">
+            <div class="card-header"><b>Total Gross Sales</b></div>
+            <div class="card-body">
+                <span class="h3" id="textTotalGrossSales@(Model)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2-sm">
+        <div class="card">
+            <div class="card-header"><b>Total Net Sales</b></div>
+            <div class="card-body">
+                <span class="h3" id="textTotalNetSales@(Model)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2-sm">
+        <div class="card">
+            <div class="card-header"><b>Avg. Gross Sales</b></div>
+            <div class="card-body">
+                <span class="h3" id="textAvgGrossSales@(Model)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2-sm">
+        <div class="card">
+            <div class="card-header"><b>Avg. Net Sales</b></div>
+            <div class="card-body">
+                <span class="h3" id="textAvgNetSales@(Model)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-2-sm">
+        <div class="card">
+            <div class="card-header"><b><span id="labelTotalItems@(Model)"></span></b></div>
+            <div class="card-body">
+                <span class="h3" id="textTotalItems@(Model)"></span>
+            </div>
+        </div>
+    </div>
+</div>

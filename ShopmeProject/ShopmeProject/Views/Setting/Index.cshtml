@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Site Settings</h2>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.messageSuccess))
+{
+    <div class="alert alert-success text-center">
+        @ViewBag.messageSuccess
+    </div>
+}
+
+<div>
+    <ul class="nav nav-tabs" id="settingTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#general" role="tab">General</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#countries" role="tab">Countries</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#states" role="tab">States</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#mailServer" role="tab">Mail Server</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#mailTemplates" role="tab">Mail Templates</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#payment" role="tab">Payment</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active p-3" id="general" role="tabpanel">
+            @Html.Partial("general")
+        </div>
+        <div class="tab-pane p-3" id="countries" role="tabpanel">
+
+            @Html.Partial("countries")
+        </div>
+        <div class="tab-pane p-3" id="states" role="tabpanel">
+            @Html.Partial("states")
+        </div>
+        <div class="tab-pane p-3" id="mailServer" role="tabpanel">
+            @Html.Partial("mail_server")
+        </div>
+        <div class="tab-pane p-3" id="mailTemplates" role="tabpanel">
+            @Html.Partial("mail_templates/mail_templates")
+        </div>
+        <div class="tab-pane p-3" id="payment" role="tabpanel">
+            @Html.Partial("payment")
+        </div>
+    </div>
+</div>
+
+
+<div class="toast justify-content-center d-flex" role="alert" aria-live="polite" aria-atomic="true" data-delay="3000">
+    <div role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+	
+
+    contextPath = '@Url.Action("", "Setting")';
+
+    var CheckDuplicateNamelUrl = '@Url.Action("CheckDuplicateName")';
+  
+
+</script>
+
+<script src="@Url.Content("~/Scripts/countries_setting.js")"></script>
+<script src="@Url.Content("~/Scripts/states_setting.js")"></script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#customerVerificationContent").richText();
+        $("#orderConfirmationContent").richText({ height: 400 });
+    });
+
+    $(document).ready(function () {
+        $('#buttonCancel').click(function () {
+            window.location.href = indexUrl;
+        });
+        $("#fileImage")
+            .change(
+                function () {
+                    fileSize = this.files[0].size;
+
+                    if (fileSize > 1048576) {
+                        this
+                            .setCustomValidity("You must choose an image less than 1MB!");
+                        this.reportValidity();
+                    } else {
+                        this.setCustomValidity("");
+                        showImageThumbnail(this);
+                    }
+                });
+    });
+
+    function showImageThumbnail(fileInput) {
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $("#thumbnail").attr("src", e.target.result);
+        };
+
+        reader.readAsDataURL(file);
+    }
+</script>

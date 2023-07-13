@@ -1,0 +1,194 @@
+﻿
+
+
+@model ShopmeProject.Models.Customer
+@{
+    ViewBag.Title = "customer_form";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+<div>&nbsp;</div>
+
+
+<div class="text-center">
+    <h2>Your Account Details</h2>
+</div>
+<div>&nbsp;</div>
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="alert alert-success text-center">@ViewBag.Message</div>
+}
+
+@using (Html.BeginForm("SaveCustomer", "AccountCustomer",
+    FormMethod.Post,
+    new { @class = "form-horizontal", style = "max-width: 600px; margin: 0 auto", onsubmit = "return checkEmailUnique(this);" }))
+{
+    <input type="hidden" name="customer.Id" value="@Model.Id" id="customerId" />
+    <input type="hidden" name="redirect" value="@ViewBag.redirect" />
+    <div class="border border-secondary rounded p-3">
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">E-mail:</label>
+            <div class="col-sm-8">
+                <input type="email" name="customer.Email" class="form-control" id="email" value="@Model.Email"
+                       required="required" maxlength="45" minlength="8" readonly />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">First Name:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.FirstName" class="form-control" value="@Model.FirstName"
+                       required="required" maxlength="45" minlength="2" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Last Name:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.LastName" class="form-control" value="@Model.LastName"
+                       required="required" maxlength="45" minlength="2" />
+            </div>
+        </div>
+
+
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Password:</label>
+            <div class="col-sm-8">
+                <input type="password" name="customer.Password" class="form-control"
+                       placeholder="Leave blank if you don't want to change password" maxlength="15" minlength="6" id="password"
+                       oninput="checkPasswordMatch(document.getElementById('confirmPassword'))" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Re-type Password:</label>
+            <div class="col-sm-8">
+                <input type="password" id="confirmPassword" class="form-control"
+                       maxlength="15" minlength="6"
+                       oninput="checkPasswordMatch(this)" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Phone Number:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.phoneNumber" class="form-control" value="@Model.phoneNumber"
+                       required="required" maxlength="15" minlength="8" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Address Line 1:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.addressLine1" class="form-control" value="@Model.addressLine1"
+                       required="required" maxlength="64" minlength="3" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Address Line 2:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.addressLine2" class="form-control" value="@Model.addressLine2"
+                       maxlength="64" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">City:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.city" class="form-control" value="@Model.city"
+                       maxlength="45" minlength="2" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Country:</label>
+            <div class="col-sm-8">
+                <select class="form-control" name="customer.CountryId" id="country">
+                    <option value="0">Select Country</option>
+                    @foreach (var country in ViewBag.listCountries)
+                    {
+                        if (Model.CountryId == country.Id)
+                        {
+                            <option value="@country.Id" selected>@country.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@country.Id">@country.Name</option>
+                        }
+
+                    }
+
+                </select>
+            </div>
+        </div>
+
+
+
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">State/Province:</label>
+            <div class="col-sm-8">
+                @*1. Option Dependent Dropdown
+                 <input type="text" th:field="*{state}" class="form-control"
+                  maxlength="45" minlength="3" list="listStates" />
+                <datalist id="listStates"></datalist>*@
+                @*2.Option Dependent Dropdown*@
+                <select name="customer.state" class="form-control" id="stateList">
+                    <option value="@Model.state" selected>@Model.state</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Postal Code:</label>
+            <div class="col-sm-8">
+                <input type="text" name="customer.postalCode" class="form-control" value="@Model.postalCode"
+                       maxlength="10" minlength="2" />
+            </div>
+        </div>
+
+        <div class="text-center">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <input type="button" value="Cancel" class="btn btn-secondary" id="buttonCancel" />
+        </div>
+    </div>
+}
+<div>&nbsp;</div>
+@Html.Partial("modal_dialog")
+
+
+
+
+
+<script>
+    var contextPath = '@Url.Action("","Setting")';
+    var contextPathCustomer = '@Url.Action("", "Customer")';
+    var moduleURL = '@Url.Action("", "HomeSite")';
+    function checkEmailUnique(form) {
+        url = contextPathCustomer + "/CheckDuplicateEmail";
+        customerEmail = $("#email").val();
+        customerId = $("#customerId").val();
+
+        params = { id: customerId, email: customerEmail };
+
+        $.post(url, params, function (response) {
+            if (response == "OK") {
+                form.submit();
+            } else if (response == "Duplicated") {
+                showWarningModal("There is another customer having the email " + customerEmail);
+            } else {
+                showErrorModal("Unknown response from server");
+            }
+        }).fail(function () {
+            showErrorModal("Could not connect to the server");
+        });
+
+        return false;
+    }
+
+
+</script>
+<script src="@Url.Content("~/Scripts/common_customer_form.js")"></script>
+<script src="@Url.Content("~/Scripts/common_modal.js")"></script>
+

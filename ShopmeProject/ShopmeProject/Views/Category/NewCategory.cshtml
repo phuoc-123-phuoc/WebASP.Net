@@ -1,0 +1,121 @@
+﻿
+@model ShopmeProject.ViewModels.CategoryViewModel
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+    var ListCategories = Model.ListCategories;
+
+}
+<h2>Manage Categories | @ViewBag.PageTitle</h2>
+
+@using (Html
+         .BeginForm("saveCategory", "Category", FormMethod.Post,
+         new
+         {
+             enctype = "multipart/form-data",
+             @class = "border border-secondary rounded p-3",
+             style = "max-width:700px; margin: 0 auto",
+             onsubmit = "return checkNameUnique(this);"
+         }))
+{
+    @Html.HiddenFor(m => m.category.Id)
+    <div class="form-group row">
+        @Html.LabelFor(x => x.category.Name, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(x => x.category.Name, new { htmlAttributes = new { @class = "form-control", @required = "required", @minlength = "8", @maxlength = "128" } })
+            @Html.ValidationMessageFor(x => x.category.Name)
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.category.Alias, new { @class = "col-sm-4 col-form-label" })
+        <div class="col-sm-8">
+            @Html.EditorFor(x => x.category.Alias, new { htmlAttributes = new { @class = "form-control", @required = "required", @minlength = "2", @maxlength = "45" } })
+            @Html.ValidationMessageFor(x => x.category.Alias)
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Parent Category:</label>
+        <div class="col-sm-8">
+            <select class="form-control" name="ParentId">
+                <option value="0">[No Parent]</option>
+                @foreach (var cat in ListCategories)
+                {
+                    if (Model.category.ParentId == cat.Id)
+                    {
+                        <option value="@cat.Id" selected>@cat.Name</option>
+                    }
+                    else
+                    {
+                        if (cat.Id != Model.category.Id)
+                        {
+                            <option value="@cat.Id">@cat.Name</option>
+                        }
+
+                    }
+
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Status:</label>
+        <div class="col-sm-8">
+
+            <div>
+                @Html.CheckBoxFor(m => m.category.Enabled)
+                @Html.LabelFor(m => m.category.Enabled)
+                @Html.HiddenFor(m => m.category.Enabled)
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Photos</label>
+        <div class="col-sm-8">
+            @Html.HiddenFor(m => m.category.Image)
+            <input type="file" id="fileImage" name="image" accept="image/png, image/jpeg"
+                   class="mb-2" />
+            <img id="thumbnail" alt="Photos preview" src="@Model.category.getImagePath" style="width: 80px; height: 60px;"
+                 class="img-fluid" />
+        </div>
+    </div>
+
+
+
+
+    <div class="text-center">
+        <input type="submit" value="Save" class="btn btn-primary m-3" />
+        <input type="button" value="Cancel" class="btn btn-secondary" id="buttonCancel" />
+    </div>
+}
+
+<div class="modal fade text-center" id="modalDialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle">Warning</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <span id="modalBody"></span>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var indexUrl = '@Url.Action("Index")';
+    var CheckDuplicateNamelUrl = '@Url.Action("CheckDuplicateName")';
+    var CheckDuplicateAliaslUrl = '@Url.Action("CheckDuplicateAlias")';
+</script>
+
+
+<script src="@Url.Content("~/Scripts/NewCategory.js")"></script>
+

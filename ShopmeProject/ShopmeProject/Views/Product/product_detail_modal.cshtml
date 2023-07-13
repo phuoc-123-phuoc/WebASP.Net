@@ -1,0 +1,248 @@
+﻿@model ShopmeProject.Models.Product
+@{ 
+    var imagesList = new List<ShopmeProject.Models.ProductImage>(Model.Images);
+}
+<div class="modal-header">
+    <h4 class="modal-title">Product Details</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#overview" role="tab">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#description" role="tab">Description</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#images" role="tab">Images</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#details" role="tab">Details</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#shipping" role="tab">Shipping</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active p-3" id="overview" role="tabpanel">
+            <div>
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Name, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Alias, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Alias, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Brand, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Brand.Name, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Category, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Category.Name, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Enabled, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-8">
+
+                        <div>
+                            @Html.CheckBoxFor(m => m.Enabled, new { onclick = "return false;" })
+
+                            @Html.HiddenFor(m => m.Enabled)
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.InStock, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-8">
+
+                        <div>
+                            @Html.CheckBoxFor(m => m.InStock, new { onclick = "return false;" })
+
+                            @Html.HiddenFor(m => m.InStock)
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Cost, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Cost, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.Price, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.Price, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.DiscountPercent, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(x => x.DiscountPercent, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.LabelFor(x => x.UpdatedTime, new { @class = "col-sm-2 col-form-label" })
+                    <div class="col-sm-10">
+                        <span>@Html.DisplayFor(m => m.UpdatedTime)</span>
+
+
+                    </div>
+                </div>
+
+            </div>
+         </div>
+        <div class="tab-pane" id="description" role="tabpanel">
+
+            <div class="m-2">
+                <label>Product Short Description:</label>
+                <div class="border p-2 m-2">@Html.Raw(Model.ShortDescription)</div>
+            </div>
+
+            <div class="m-2">
+                <label>Product Full Description:</label>
+                <div class="border p-2 m-2">@Html.Raw(Model.FullDescription)</div>
+            </div>
+
+
+        </div>
+        <div class="tab-pane" id="images" role="tabpanel">
+            <div class="row">
+                <div class="col border m-3 p-2">
+                    <div><label>Main Image: @Model.MainImage</label></div>
+                    <div class="m-2">
+                        <div class="m-2">
+                            <img alt="Main image preview" class="img-fluid"
+                                 src="@Model.getImagePath" />
+                        </div>
+                    </div>
+                </div>
+
+                @for (int i = 0; i < imagesList.Count; i++)
+                {
+                    var productImage = imagesList[i];
+                    <div class="col border m-3 p-2">
+                        <div>
+                            <label>Extra Image #@(i + 1): @productImage.Name</label>
+                        </div>
+                        <div class="m-2">
+                            <img id="extraThumbnail@(i)" alt="Extra image #(i + 1) preview" class="img-fluid" src="@productImage.getImagePath" />
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+           
+
+        </div>
+        <div class="tab-pane p-3" id="details" role="tabpanel">
+
+            <div>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th width="40%">Name</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var detail in Model.Details)
+                        { 
+                        <tr>
+                            <td>@detail.Name</td>
+                            <td>@detail.Value</td>
+                        </tr>
+                        }
+                            
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="tab-pane p-3" id="shipping" role="tabpanel">
+
+            <div class="form-group row">
+                @Html.LabelFor(x => x.Length, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+
+                    @Html.EditorFor(x => x.Length, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(x => x.Width, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+
+                    @Html.EditorFor(x => x.Width, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(x => x.Height, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+
+                    @Html.EditorFor(x => x.Height, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(x => x.Weight, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+
+                    @Html.EditorFor(x => x.Weight, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @readonly = "readonly" } })
+
+                </div>
+            </div>
+
+          
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+</div>

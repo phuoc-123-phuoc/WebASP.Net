@@ -1,0 +1,138 @@
+﻿
+
+@model ShopmeProject.ViewModels.ProductViewModel
+@{
+    List<ShopmeProject.Models.Category> ListCategories = new List<ShopmeProject.Models.Category>();
+    if (Model.product != null && Model.product.Brand != null)
+    {
+        ListCategories = Model.product.Brand.Categories.ToList();
+    }
+}
+
+
+<div>
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.Name, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+
+            @Html.EditorFor(x => x.product.Name, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256" } })
+            @Html.ValidationMessageFor(x => x.product.Name)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.Alias, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+
+            @Html.EditorFor(x => x.product.Alias, new { htmlAttributes = new { @class = "form-control col-sm-10", @required = "required", @minlength = "3", @maxlength = "256", @placeholder = "Default is product name (spaces are replaced by dashes)" } })
+            @Html.ValidationMessageFor(x => x.product.Alias)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.brands, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            <select class="form-control col-sm-10 " id="brand" name="product.BrandId">
+
+                @foreach (var brand in Model.brands)
+                {
+                    if (Model.product.BrandId == brand.Id)
+                    {
+                        <option value="@brand.Id" selected>@brand.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@brand.Id">@brand.Name</option>
+                    }
+
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.category, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+            @if (Model.product.CategoryId != 0)
+            {
+            <select class="form-control col-sm-10" id="category" name="product.CategoryId">
+                @foreach (var cat in ListCategories)
+                {
+                    if (Model.product.CategoryId == cat.Id)
+                    {
+                        <option value="@cat.Id" selected>@cat.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                }
+
+            </select>
+            }
+            @if (Model.product.CategoryId == 0)
+            {
+                <select class="form-control col-sm-10" id="category" name="product.CategoryId">
+                </select>
+            }
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.Enabled, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-8">
+
+            <div>
+                @Html.CheckBoxFor(m => m.product.Enabled)
+
+                @Html.HiddenFor(m => m.product.Enabled)
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.InStock, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-8">
+
+            <div>
+                @Html.CheckBoxFor(m => m.product.InStock)
+
+                @Html.HiddenFor(m => m.product.InStock)
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.Cost, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+
+            @Html.EditorFor(x => x.product.Cost, new { htmlAttributes = new { @class = "form-control col-sm-10", type = "number", step = "0.1", min = "0" } })
+            @Html.ValidationMessageFor(x => x.product.Cost)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.Price, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+
+            @Html.EditorFor(x => x.product.Price, new { htmlAttributes = new { @class = "form-control col-sm-10", type = "number", step = "0.1", min = "0" } })
+            @Html.ValidationMessageFor(x => x.product.Price)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.LabelFor(x => x.product.DiscountPercent, new { @class = "col-sm-2 col-form-label" })
+        <div class="col-sm-10">
+
+            @Html.EditorFor(x => x.product.DiscountPercent, new { htmlAttributes = new { @class = "form-control col-sm-10", type = "number", step = "0.1", min = "0" } })
+            @Html.ValidationMessageFor(x => x.product.DiscountPercent)
+        </div>
+    </div>
+
+</div>

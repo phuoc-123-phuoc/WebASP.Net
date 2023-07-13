@@ -1,0 +1,143 @@
+﻿@model ShopmeProject.Models.Customer
+@{
+    ViewBag.Title = "register_form";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div>&nbsp;</div>
+
+<div class="text-center">
+    <h2>Customer Registration</h2>
+</div>
+
+@using (Html.BeginForm("createCustomer", "CustomerSite",
+    FormMethod.Post,
+    new { @class = "form-horizontal", style = "max-width: 600px; margin: 0 auto", onsubmit = "return checkEmailUnique(this);" }))
+{
+<div class="border border-secondary rounded p-3">
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">First Name:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.FirstName" class="form-control"
+                   required="required" maxlength="45" minlength="2" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Last Name:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.LastName" class="form-control"
+                   required="required" maxlength="45" minlength="2" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">E-mail:</label>
+        <div class="col-sm-8">
+            <input type="email" name="customer.Email" class="form-control" id="email"
+                   required="required" maxlength="45" minlength="8" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Password:</label>
+        <div class="col-sm-8">
+            <input type="password" name="customer.Password" class="form-control"
+                   required="required" maxlength="15" minlength="6" id="password"
+                   oninput="checkPasswordMatch(document.getElementById('confirmPassword'))" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Re-type Password:</label>
+        <div class="col-sm-8">
+            <input type="password" id="confirmPassword" class="form-control"
+                   required="required" maxlength="15" minlength="6"
+                   oninput="checkPasswordMatch(this)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Phone Number:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.phoneNumber" class="form-control"
+                   required="required" maxlength="15" minlength="8" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Address Line 1:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.addressLine1" class="form-control"
+                   required="required" maxlength="64" minlength="3" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Address Line 2:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.addressLine2" class="form-control"
+                   maxlength="64" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">City:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.city" class="form-control"
+                   maxlength="45" minlength="2" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Country:</label>
+        <div class="col-sm-8">
+            <select class="form-control" name="customer.CountryId" id="country">
+                <option value="0">Select Country</option>
+                @foreach (var country in ViewBag.listCountries)
+                {
+                    <option value="@country.Id">@country.Name</option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">State/Province:</label>
+        <div class="col-sm-8">
+            <!-- 1. Option Dependent Dropdown-->
+            <!-- <input type="text" th:field="*{state}" class="form-control"
+              maxlength="45" minlength="3" list="listStates" />
+            <datalist id="listStates"></datalist> -->
+            <!-- 2.Option Dependent Dropdown -->
+            <select name="customer.state" class="form-control" id="stateList">
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Postal Code:</label>
+        <div class="col-sm-8">
+            <input type="text" name="customer.postalCode" class="form-control"
+                   maxlength="10" minlength="2" />
+        </div>
+    </div>
+
+    <div class="text-center">
+        <input type="submit" value="Create Account" class="btn btn-primary" />
+    </div>
+</div>
+}
+<div>&nbsp;</div>
+@Html.Partial("modal_dialog")
+<script>
+    var contextPath = '@Url.Action("","Setting")';
+    var contextPathCustomer = '@Url.Action("", "CustomerSite")';
+   
+</script>
+<script src="@Url.Content("~/Scripts/common_customer_form.js")"></script>
+<script src="@Url.Content("~/Scripts/common_modal.js")"></script>
+<script src="@Url.Content("~/Scripts/register.js")"></script>

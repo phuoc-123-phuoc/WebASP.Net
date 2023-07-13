@@ -1,0 +1,247 @@
+﻿@model List<ShopmeProject.Models.Order>
+@using ShopmeProject.Helpers
+@{
+    ViewBag.Title = "orders_shipper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div>
+        <h2>Manage Orders</h2>
+    </div>
+
+    <div>
+        @using (Html.BeginForm("ListByPage", "Order", FormMethod.Get, new { @class = "form-inline m-3", id = "searchForm" }))
+        {
+
+            <input type="hidden" name="pageNum" value="1" />
+            <label>&nbsp; Filter: &nbsp;</label>
+            <input type="search" name="keyword" value="@ViewBag.KeyWord" class="form-control" required />
+            <label>&nbsp;&nbsp;</label>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            <label>&nbsp;&nbsp;</label>
+            <button type="button" class="btn btn-secondary" onclick="clearFilter()"><i class="fas fa-eraser"></i></button>
+        }
+
+    </div>
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-success text-center">@ViewBag.Message</div>
+    }
+    <div>
+        @foreach (var item in Model)
+        {
+            <div class="row m-1">
+                <div class="col-lg-12 md-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col">
+                                    <span>Order ID #@item.Id</span>
+                                </div>
+                                <div class="col">
+                                    <div class="float-right">
+                                        <a class="fas fa-file-alt fa-2x icon-green link-detail"
+                                           href="@Url.Action("Detail", "Order", new { id = item.Id})"
+                                           title="View details of this order"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <i class="fas fa-user"></i> <b> @item.RecipientName</b>
+                            </div>
+                            <div>
+                                <i class="fas fa-home"></i>@item.RecipientAddress
+                            </div>
+                            <div>
+                                <i class="fas fa-phone-alt"></i>@item.phoneNumber
+                            </div>
+                            @if (item.paymentMethod == "COD")
+                            {
+                                <div>
+                                    <span>
+                                        COD: <b>
+                                            @Html.FormatPrice(ViewBag.CURRENCY_SYMBOL as string, ViewBag.CURRENCY_SYMBOL_POSITION as string, item.total, ViewBag.THOUSANDS_POINT_TYPE as string, ViewBag.DECIMAL_DIGITS as string, ViewBag.DECIMAL_POINT_TYPE as string)
+
+                                        </b>
+                                    </span>
+                                </div>
+                            }
+
+                            <div>&nbsp;</div>
+                            <div class="row">
+                                <div class="col">
+                                    @if (item.OrderTrack.Any(track => track.Status == "PICKED"))
+                                    {
+                                        <i class="fas fa-people-carry fa-2x icon-green"></i>
+                                    }
+                                    else
+                                    {
+                                        <a class="fas fa-people-carry fa-2x icon-dark linkUpdateStatus"
+                                           id="linkPICKED@(item.Id)"
+                                           orderId="@item.Id"
+                                           status="PICKED"
+                                           href="@Url.Action("updateOrderStatus", "Order", new { id = item.Id, status = "PICKED" })"></a>
+                                    }
+
+                                </div>
+                                <div class="col">
+                                    @if (item.OrderTrack.Any(track => track.Status == "SHIPPING"))
+                                    {
+                                        <i class="fas fa-shipping-fast fa-2x icon-green"></i>
+                                    }
+                                    else
+                                    {
+                                        <a class="fas fa-shipping-fast fa-2x icon-dark linkUpdateStatus"
+                                           id="linkSHIPPING@(item.Id)"
+                                           orderId="@item.Id"
+                                           status="SHIPPING"
+                                           href="@Url.Action("updateOrderStatus", "Order", new { id = item.Id, status = "SHIPPING" })"></a>
+                                    }
+
+                                </div>
+                                <div class="col">
+                                    @if (item.OrderTrack.Any(track => track.Status == "DELIVERED"))
+                                    {
+                                        <i class="fas fa-box-open fa-2x icon-green"></i>
+                                    }
+                                    else
+                                    {
+                                        <a class="fas fa-box-open fa-2x icon-dark linkUpdateStatus"
+                                           id="linkDELIVERED@(item.Id)"
+                                           orderId="@item.Id"
+                                           status="DELIVERED"
+                                           href="@Url.Action("updateOrderStatus", "Order", new { id = item.Id, status = "DELIVERED" })"></a>
+                                    }
+
+                                </div>
+                                <div class="col">
+                                    @if (item.OrderTrack.Any(track => track.Status == "RETURNED"))
+                                    {
+                                        <i class="fas fa-undo fa-2x icon-green"></i>
+                                    }
+                                    else
+                                    {
+                                        <a class="fas fa-undo fa-2x icon-dark linkUpdateStatus"
+                                           id="linkRETURNED@(item.Id)"
+                                           orderId="@item.Id"
+                                           status="RETURNED"
+                                           href="@Url.Action("updateOrderStatus", "Order", new { id = item.Id, status = "RETURNED"  })"></a>
+                                    }
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <div class="modal fade text-center" id="confirmModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <span id="confirmText"></span>
+                </div>
+
+                <div class="modal-footer">
+                    <a class="btn btn-success" href="" id="yesButton">Yes</a>
+                    <button type="button" class="btn btn-danger" id="noButton"
+                            data-dismiss="modal">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (ViewBag.TotalItems > 0)
+    {
+        <div class="text-center m-1">
+
+            <span>Showing orders # @ViewBag.StartCount to @ViewBag.EndCount of @ViewBag.TotalItems</span>
+
+        </div>
+    }
+    else
+    {
+        <div class="text-center m-1">
+            <span>No orders found</span>
+        </div>
+    }
+
+    @if (ViewBag.TotalPage > 1)
+    {
+
+        <nav>
+            <ul class="pagination justify-content-center flex-wrap">
+                <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                    @Html.Partial("_PageLink", new { pageNumber = 1, label = "First" })
+
+
+                </li>
+                <li class="@(ViewBag.CurrentPage > 1 ? "page-item" : "page-item disabled")">
+                    @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage - 1, label = "Previous" })
+                </li>
+                @for (int i = 1; i <= ViewBag.TotalPage; i++)
+                {
+                    <li class="@(ViewBag.CurrentPage != i ? "page-item" : "page-item active")">
+                        @Html.Partial("_PageLink", new { pageNumber = i, label = i.ToString() })
+
+                    </li>
+
+                }
+                <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                    @Html.Partial("_PageLink", new { pageNumber = ViewBag.CurrentPage + 1, label = "Next" })
+
+                </li>
+                <li class="@(ViewBag.CurrentPage <  ViewBag.TotalPage ? "page-item" : "page-item disabled")">
+                    @Html.Partial("_PageLink", new { pageNumber = ViewBag.TotalPage, label = "Last" })
+                </li>
+            </ul>
+        </nav>
+
+
+    }
+
+
+    <div class="modal fade" id="detailModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+
+
+</div>
+<script src="@Url.Content("~/Scripts/common_list.js")"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        handleDefaultDetailLinkClick();
+
+    });
+
+    function clearFilter(){
+		window.location = '@Url.Action("Index")';
+	}
+
+
+</script>
+
+<script src="@Url.Content("~/Scripts/orders_shipper.js")"></script>
+

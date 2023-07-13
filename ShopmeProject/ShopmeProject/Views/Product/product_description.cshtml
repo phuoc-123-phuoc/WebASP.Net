@@ -1,0 +1,11 @@
+﻿@model ShopmeProject.ViewModels.ProductViewModel
+
+<div class="m-2">
+    @Html.LabelFor(m => m.product.ShortDescription)
+    @Html.TextAreaFor(m => m.product.ShortDescription, new { @class = "form-control", @rows = "5", @required = "required" })
+</div>
+
+<div class="m-2">
+    @Html.LabelFor(m => m.product.FullDescription )
+    @Html.TextAreaFor(m => m.product.FullDescription, new { @class = "form-control", @rows = "10", @required = "required" })
+</div>

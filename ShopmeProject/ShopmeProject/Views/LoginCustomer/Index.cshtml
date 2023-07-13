@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div>
+    <h2>Customer Login</h2>
+</div>
+<div class="container-fluid text-center">
+
+    @*<div class="mt-3">
+        <a class="btn btn-lg btn-secondary fab fa-google" href="">&nbsp;&nbsp;Continue with Google</a>
+    </div>*@
+
+    <div>&nbsp;</div>
+
+    <form action="@Url.Action("Index","LoginCustomer")" method="post" style="max-width: 350px; margin: 0 auto">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div>
+                <p class="text-danger">@ViewBag.ErrorMessage</p>
+            </div>
+        }
+
+        @*<div th:if="${param.logout}">
+            <p class="text-warning">You have been logged out.</p>
+        </div>*@
+
+        <div class="border border-secondary rounded p-3">
+            <p>
+                <input type="email" name="email" class="form-control" placeholder="E-mail" required />
+            </p>
+            <p>
+                <input type="password" name="password" class="form-control" placeholder="Password" required />
+            </p>
+            <p>
+                <input type="checkbox" name="remember-me" />&nbsp;Remember Me
+            </p>
+            <p>
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </p>
+        </div>
+    </form>
+
+    <div>&nbsp;</div>
+
+    <div>
+        or <a href="@Url.Action("Index","ForgotPassword")">Forgot Password</a>
+    </div>
+
+    <div>
+        Don't have an account? <a href="@Url.Action("Register","CustomerSite")"><b>Sign up</b></a>
+    </div>
+
+    <div>&nbsp;</div>
+
+
+</div>
+
+  

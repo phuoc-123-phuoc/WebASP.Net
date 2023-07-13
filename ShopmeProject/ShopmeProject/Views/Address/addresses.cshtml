@@ -1,0 +1,178 @@
+﻿
+@{
+    ViewBag.Title = "addresses";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="container-fluid">
+    @Html.Partial("Navigation")
+    <div>
+        <div class="text-center">
+            <div>
+                <h2>
+                    @if (ViewBag.redirect != null)
+                        {
+                            <text>Choose a Shipping Address</text>
+                        }
+                        else
+                        {
+                            <text>Your Address Book</text>
+                        }
+                    
+                </h2>
+            </div>
+            <div>
+                @if (Request.QueryString["redirect"] == null)
+                {
+                    <a href="@Url.Action("newAddress", "Address")" class="h4">Add New Address</a>
+                }
+                @*@if (ViewBag.redirectedFromCheckoutPage)
+                    {
+                        <a href="@Url.Action("new", "address_book", new { redirect = "checkout" })" class="h4">Add New Address</a>
+                    }*@
+            </div>
+        </div>
+
+        @if (ViewBag.message != null)
+        {
+            <div class="alert alert-success text-center m-1">
+                @ViewBag.message
+            </div>
+        }
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-6 mt-2">
+            <div class="card @(ViewBag.usePrimaryAddressAsDefault ? "bg-warning" : "")">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+
+                            <b>Your Primary Address</b>
+
+                            @if (ViewBag.usePrimaryAddressAsDefault)
+                            {
+                                <span class="text-danger">[Default]</span>
+                            }
+                            else
+                            {
+                                if (ViewBag.redirect == "cart")
+                                {
+                                    <span><a href="@Url.Action("setDefaultAddress", "Address", new { addressId = 0, redirect ="cart" })">[Set as default]</a></span>
+                                }
+                                else
+                                {
+                                    <span><a href="@Url.Action("setDefaultAddress", "Address", new { addressId = 0})">[Set as default]</a></span>
+                                }
+
+
+                            }
+                        </div>
+
+                        <div class="col">
+                            <div class="float-right">
+
+                                <a class="fas fa-edit icon-dark" title="Edit your primary address" href="@Url.Action("editCustomer", "AccountCustomer", new { email = ViewBag.customer.Email , redirect = "cart"  })"></a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    @ViewBag.customer.Address
+                </div>
+            </div>
+        </div>
+        @{int status = 2;}
+        @foreach (var address in ViewBag.listAddresses)
+        {
+
+            <div class="col-sm-6 mt-2">
+                <div class="card @(address.defaultForShipping ? "bg-warning" : "")">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col">
+                                <b>Address #@status</b>
+
+                                @if (address.defaultForShipping)
+                                {
+                                    <span class="text-danger">[Default]</span>
+                                }
+                                else
+                                {
+                                    if (ViewBag.redirect == "cart")
+                                    {
+                                        <a href="@Url.Action("setDefaultAddress", "Address", new { addressId = address.Id , redirect ="cart"  })">[Set as default]</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("setDefaultAddress", "Address", new { addressId = address.Id  })">[Set as default]</a>
+                                    }
+
+                                }
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="float-right">
+
+                                <a class="fas fa-edit icon-dark" title="Edit this address" href="@Url.Action("editAddress", "Address", new { addressId = address.Id })"></a>
+                                &nbsp;
+                                <a class="fas fa-trash icon-dark linkDelete" title="Delete this address" addressId="@address.Id"  href="@Url.Action("deleteAddress", "Address", new { addressId = address.Id })"></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @address.getAddress
+                    </div>
+                </div>
+            </div>
+            status++;
+        }
+    </div>
+
+
+
+</div>
+<div class="modal fade text-center" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Confirmation</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <span id="confirmText"></span>
+            </div>
+
+            <div class="modal-footer">
+                <a class="btn btn-success" href="" id="yesButton">Yes</a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".linkDelete").on("click", function(evt) {
+            evt.preventDefault();
+            link = $(this);
+            //alert($(this).attr("href"));
+            addressId = link.attr("addressId");
+            showDeleteConfirmModal($(this), 'address', addressId);
+		});
+	});
+
+    function showDeleteConfirmModal(link, entityName, addressId) {
+		entityId = link.attr("entityId");
+
+		$("#yesButton").attr("href", link.attr("href"));
+		$("#confirmText").text("Are you sure you want to delete this "
+            + entityName + " ID " + addressId + "?");
+		$("#confirmModal").modal();
+	}
+</script>

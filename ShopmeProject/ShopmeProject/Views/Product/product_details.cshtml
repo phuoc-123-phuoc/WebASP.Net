@@ -1,0 +1,31 @@
+﻿@{
+    
+    int numberOfExistingDetails = Model.product.Details.Count;
+}
+
+<div id="divProductDetails">
+
+    @{
+        int index = 0;
+    }
+    @foreach (var detail in Model.product.Details)
+    {
+        <div class="form-inline" id="divDetail@(index)">
+            <input type="hidden" name="detailIDs" value="@detail.Id" />
+            <label class="m-3">Name:</label>
+            <input type="text" class="form-control w-25" name="detailNames" maxlength="255" value="@detail.Name" />
+            <label class="m-3">Value:</label>
+            <input type="text" class="form-control w-25" name="detailValues" maxlength="255" value="@detail.Value" />
+            <a name="linkRemoveDetail" class="btn fas fa-times-circle fa-2x icon-dark" title="Remove this detail"></a>
+        </div>
+        index++;
+    }
+
+    <div class="form-inline" id="divDetail@(numberOfExistingDetails)">
+        <input type="hidden" name="detailIDs" value="0" />
+        <label class="m-3">Name:</label>
+        <input type="text" class="form-control w-25" name="detailNames" maxlength="255" />
+        <label class="m-3">Value:</label>
+        <input type="text" class="form-control w-25" name="detailValues" maxlength="255" />
+    </div>
+</div>

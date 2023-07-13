@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "message";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="container-fluid text-center">
+
+    <div>&nbsp;</div>
+
+    @if (!string.IsNullOrEmpty(@ViewBag.pageTitle))
+    {
+        <div>
+            <h2>@ViewBag.pageTitle</h2>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(@ViewBag.message))
+    {
+        <div>
+            <h3>@ViewBag.message</h3>
+        </div>
+    }
+
+
+    <div>&nbsp;</div>
+
+   
+</div>

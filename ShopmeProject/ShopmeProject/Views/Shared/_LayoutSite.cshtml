@@ -1,0 +1,95 @@
+﻿@*@using System.Security.Claims
+@{
+    var user = User as ClaimsPrincipal;
+    string email = "";
+    if (user != null)
+    {
+        email = user.FindFirst("email")?.Value;
+        var roles = user.Claims
+        .Where(c => c.Type == "role")
+        .Select(c => c.Value);
+
+    }
+
+   
+}*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>@ViewBag.SITE_NAME - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/richtext/richtext.min.css")
+    <script src="https://kit.fontawesome.com/88f53efafd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a class="navbar-brand" href="@Url.Action("Index", "HomeSite")">
+                    <img src="~/site-logo/@ViewBag.SITE_LOGO" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="topNavbar">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","LoginCustomer")">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Register","CustomerSite")">Register</a>
+                        </li>
+                        
+
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+
+     
+
+        @RenderBody()
+
+
+        
+        <div class="text-center">
+            <p>Shopme Control Panel -  @ViewBag.COPYRIGHT - @DateTime.Now.Year </p>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+    $(document).ready(function () {
+
+        customizeDropDownMenu();
+    });
+    function customizeDropDownMenu() {
+        $(".navbar .dropdown").hover(
+
+            function () {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+            },
+            function () {
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+            }
+        );
+
+        $(".dropdown >a").click(function () {
+            location.href = this.href;
+        });
+    }
+    </script>
+    <script src="@Url.Content("~/richtext/jquery.richtext.min.js")"></script>
+</body>
+</html>

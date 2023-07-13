@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div th:replace="navigation :: menu"></div>
+    <div>
+        <h2>Sales Report</h2>
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs" id="reportTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#date" role="tab">Sales by Date</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#category" role="tab">Sales by Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#product" role="tab">Sales by Product</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active p-3" id="date" role="tabpanel">
+                @Html.Partial("sales_report_fragment", "_date")
+
+            </div>
+            <div class="tab-pane p-3" id="category" role="tabpanel">
+                @Html.Partial("sales_report_fragment", "_category")
+
+            </div>
+            <div class="tab-pane p-3" id="product" role="tabpanel">
+                @Html.Partial("sales_report_fragment", "_product")
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+@{
+    string contextPath = Url.Content("~/");
+    string currencySymbol = ViewBag.CURRENCY_SYMBOL;
+    string thousandsPointType = ViewBag.THOUSANDS_POINT_TYPE == "COMMA" ? "," : ".";
+    string decimalPointType = ViewBag.DECIMAL_POINT_TYPE == "COMMA" ? "," : ".";
+    string currencySymbolPosition = ViewBag.CURRENCY_SYMBOL_POSITION;
+    string decimalDigits = ViewBag.DECIMAL_DIGITS;
+
+    string prefixCurrencySymbol = currencySymbolPosition == "Before price" ? currencySymbol : "";
+    string suffixCurrencySymbol = currencySymbolPosition == "After price" ? currencySymbol : "";
+}
+
+<script type="text/javascript">
+    var contextPath = "@contextPath";
+    var currencySymbol = "@currencySymbol";
+    var thousandsPointType = "@thousandsPointType";
+    var decimalPointType = "@decimalPointType";
+    var currencySymbolPosition = "@currencySymbolPosition";
+    var decimalDigits = "@decimalDigits";
+
+    var prefixCurrencySymbol = currencySymbolPosition === "Before price" ? currencySymbol : "";
+    var suffixCurrencySymbol = currencySymbolPosition === "After price" ? currencySymbol : "";
+
+    $(document).ready(function() {
+        google.charts.load('current', {'packages': ['corechart', 'table']});
+        google.charts.setOnLoadCallback(loadSalesReportByDate);
+    });
+</script>
+<script src="@Url.Content("~/Scripts/jquery.number.min.js")"></script>
+<script src="@Url.Content("~/Scripts/sales_report_common.js")"></script>
+<script src="@Url.Content("~/Scripts/sales_report_by_date.js")"></script>
+<script src="@Url.Content("~/Scripts/sales_report_by_category.js")"></script>
+<script src="@Url.Content("~/Scripts/sales_report_by_product.js")"></script>
+
+
